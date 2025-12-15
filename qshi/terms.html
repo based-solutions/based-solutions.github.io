@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qshi – Terms of Use</title>
+
+  <style>
+    :root{
+      --bg: #0b1220;
+      --bg2:#050914;
+      --card: rgba(15, 23, 42, .82);
+      --text: #e5e7eb;
+      --muted:#9ca3af;
+      --border: rgba(148, 163, 184, .25);
+      --accent:#38bdf8;
+      --accent2:#60a5fa;
+      --shadow: 0 24px 60px rgba(0,0,0,.45);
+      --radius: 20px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 600px at 10% 10%, rgba(56,189,248,.22), transparent 55%),
+        radial-gradient(800px 700px at 90% 30%, rgba(96,165,250,.18), transparent 55%),
+        radial-gradient(900px 700px at 40% 100%, rgba(34,197,94,.10), transparent 55%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      padding: 32px 16px;
+    }
+
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .card{
+      background: linear-gradient(135deg, rgba(15, 23, 42, .88), rgba(2, 6, 23, .90));
+      border: 1px solid rgba(148, 163, 184, .28);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 28px 20px;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(14px);
+    }
+
+    @media (min-width: 768px){
+      .card{ padding: 40px 44px; }
+    }
+
+    .card::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(700px 420px at 80% 0%, rgba(56,189,248,.16), transparent 60%),
+        radial-gradient(600px 520px at 0% 70%, rgba(96,165,250,.12), transparent 60%);
+      pointer-events:none;
+      opacity:.95;
+    }
+
+    header{
+      position:relative;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 18px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, .35);
+      background: rgba(2,6,23,.45);
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .dot{
+      width:9px; height:9px; border-radius:50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(56,189,248,.18);
+      flex: 0 0 auto;
+    }
+
+    h1{
+      margin: 0 0 6px 0;
+      font-size: 2rem;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle{
+      margin:0;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .toc{
+      position:relative;
+      margin: 18px 0 8px;
+      padding: 14px 14px;
+      border: 1px solid rgba(148,163,184,.22);
+      border-radius: 14px;
+      background: rgba(2,6,23,.35);
+    }
+
+    .toc strong{ color:#f9fafb; }
+    .toc a{
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(56,189,248,.35);
+    }
+    .toc a:hover{ border-bottom-color: transparent; }
+
+    main{ position:relative; }
+
+    section{
+      padding: 14px 0 10px;
+      border-bottom: 1px solid rgba(148, 163, 184, .16);
+    }
+    section:last-of-type{ border-bottom: none; padding-bottom: 0; }
+
+    h2{
+      margin: 0 0 10px 0;
+      font-size: 1.15rem;
+      letter-spacing: -0.01em;
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+
+    .badge{
+      font-size: .72rem;
+      color: var(--accent);
+      border: 1px solid rgba(56,189,248,.35);
+      background: rgba(56,189,248,.10);
+      padding: 3px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    p{
+      margin: 0 0 10px 0;
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 1rem;
+    }
+
+    ul{
+      margin: 10px 0 12px 18px;
+      padding-left: 8px;
+    }
+
+    li{
+      margin: 8px 0;
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    strong{ color:#f9fafb; font-weight: 650; }
+    em{ color: var(--muted); }
+
+    a{
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(56,189,248,.35);
+      padding-bottom: 1px;
+      transition: .15s ease;
+    }
+    a:hover{
+      border-bottom-color: transparent;
+      color: #7dd3fc;
+    }
+
+    .callout{
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(96,165,250,.25);
+      background: rgba(96,165,250,.10);
+      color: var(--text);
+    }
+
+    .footer{
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px dashed rgba(148, 163, 184, .28);
+      color: var(--muted);
+      font-size: .9rem;
+      position:relative;
+    }
+
+    /* nicer scrollbars (desktop) */
+    ::-webkit-scrollbar{ width: 10px; }
+    ::-webkit-scrollbar-track{ background: rgba(2,6,23,.55); }
+    ::-webkit-scrollbar-thumb{
+      background: rgba(148,163,184,.35);
+      border-radius: 999px;
+      border: 2px solid rgba(2,6,23,.55);
+    }
+    ::-webkit-scrollbar-thumb:hover{ background: rgba(148,163,184,.55); }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <article class="card">
+      <header>
+        <div class="pill"><span class="dot"></span><span>Legal · Terms</span></div>
+        <h1>Qshi – Terms of Use</h1>
+        <p class="subtitle"><em>Last updated: December 15, 2025</em></p>
+
+        <div class="toc">
+          <strong>Quick navigation:</strong>
+          <span>
+            <a href="#s1">1</a> · <a href="#s2">2</a> · <a href="#s3">3</a> ·
+            <a href="#s4">4</a> · <a href="#s5">5</a> · <a href="#s6">6</a> ·
+            <a href="#s7">7</a> · <a href="#s8">8</a> · <a href="#s9">9</a> ·
+            <a href="#s10">10</a> · <a href="#s11">11</a>
+          </span>
+        </div>
+      </header>
+
+      <main>
+        <section id="s1">
+          <h2>1. Overview of the Agreement <span class="badge">Agreement</span></h2>
+          <p>
+            This Terms of Use agreement (“Terms”) is a legal agreement between you and
+            <strong>Based Solutions</strong> (“Company,” “we,” or “us”), the provider of the
+            <strong>Qshi</strong> mobile application (“Qshi” or “the app”).
+            These Terms govern your access to and use of Qshi. By downloading, installing,
+            or using Qshi, you agree to be bound by these Terms. If you do not agree with
+            any part of these Terms, you must not use the app.
+          </p>
+        </section>
+
+        <section id="s2">
+          <h2>2. Age Requirement <span class="badge">3+</span></h2>
+          <p>
+            Qshi is rated <strong>3+</strong> and intended for users of all ages. However,
+            if you are under the age of 18 (or the age of legal majority in your jurisdiction),
+            you may only use Qshi under the supervision of a parent or legal guardian who agrees
+            to these Terms on your behalf. By using Qshi, you affirm that you are at least 3 years
+            old and, if you are a minor, that your parent or guardian has reviewed and agreed to
+            these Terms.
+          </p>
+        </section>
+
+        <section id="s3">
+          <h2>3. Use of the App and Content <span class="badge">Rules</span></h2>
+          <p>
+            We grant you a personal, non-exclusive, non-transferable, limited license to use Qshi
+            for your own non-commercial purposes, subject to your compliance with these Terms.
+            You agree to use Qshi only for lawful purposes and in accordance with these Terms.
+            You must not:
+          </p>
+          <ul>
+            <li>Use Qshi in any way that violates any applicable law or regulation.</li>
+            <li>
+              Engage in any disruptive, harmful, or unauthorized activities, including introducing
+              viruses or malicious code, or attempting to gain unauthorized access to Qshi or
+              interfere with its normal functioning.
+            </li>
+            <li>
+              Attempt to decompile, reverse engineer, or extract the source code of Qshi, except
+              to the extent that such activity is expressly permitted by applicable law.
+            </li>
+            <li>
+              Use any automated system or software (such as scripts or bots) to scrape data from
+              Qshi or to interact with the app in an excessive or disruptive manner.
+            </li>
+            <li>
+              Impersonate any person or entity, or misrepresent your identity or affiliation, when
+              using Qshi.
+            </li>
+            <li>
+              Transmit or share through Qshi any content that is unlawful, infringing, obscene, or
+              otherwise objectionable (if Qshi allows user-generated content).
+            </li>
+          </ul>
+          <p class="callout">
+            Any violation of the above conditions may result in the suspension or termination of your access to Qshi.
+          </p>
+        </section>
+
+        <section id="s4">
+          <h2>4. Intellectual Property <span class="badge">IP</span></h2>
+          <p>
+            All content, features, and functionality of Qshi (including but not limited to text,
+            questions, explanations, graphics, logos, images, music, software, and animations) are
+            the intellectual property of Based Solutions or its licensors and are protected by
+            copyright, trademark, and other intellectual property laws. The name “Qshi” and the Qshi
+            logo are trademarks of Based Solutions. We reserve all rights in and to the app and its
+            content not expressly granted to you in these Terms.
+          </p>
+          <p>
+            Under these Terms, we grant you a limited license to use Qshi and its content for personal,
+            non-commercial use. This license is for use of the app on compatible devices that you own or
+            control, and it is not a sale or transfer of any intellectual property rights to you. You may
+            not reproduce, distribute, publicly display, sell, publish, or create derivative works from any
+            part of Qshi or its content without our prior written permission, except as allowed by law.
+            You also shall not remove or alter any copyright, trademark, or other proprietary rights notices
+            in Qshi.
+          </p>
+          <p>
+            If you submit feedback, suggestions, or ideas regarding Qshi to us, you agree that we may use
+            and share such feedback for any purpose without compensating you. Any such feedback you provide
+            is entirely voluntary and will not create any confidentiality obligation.
+          </p>
+        </section>
+
+        <section id="s5">
+          <h2>5. Subscription Terms and Purchases <span class="badge">Billing</span></h2>
+          <p>
+            Qshi may offer certain features or content through in-app purchases or subscription services.
+            If you choose to make a purchase or subscribe to paid content within Qshi, you agree to the
+            following terms:
+          </p>
+          <ul>
+            <li>
+              <strong>Payment:</strong> All payments for in-app purchases or subscriptions are processed
+              through Google Play using your Google Play account. You must have a valid payment method on
+              file with Google Play. By initiating a purchase or subscription, you authorize Google Play to
+              charge your provided payment method for the applicable fees.
+            </li>
+            <li>
+              <strong>Subscription Auto-Renewal:</strong> If you purchase a subscription, it will
+              automatically renew at the end of each billing cycle (e.g. monthly or annually) and you will
+              be charged the subscription fee unless you cancel before the next renewal date. The subscription
+              terms, including the price, billing period, and automatic renewal, will be disclosed to you at
+              the time of purchase. By subscribing, you acknowledge and agree that recurring charges will be
+              billed to your Google Play account until you cancel the subscription.
+            </li>
+            <li>
+              <strong>Managing Subscriptions:</strong> You can manage or cancel your Qshi subscription at any
+              time through your Google Play account settings.
+            </li>
+            <li>
+              <strong>Changes to Fees:</strong> We reserve the right to adjust the pricing of any subscriptions
+              or in-app purchases. If the price of a subscription changes, we will notify you in advance (for
+              example, via Google Play or in-app notification). Any price changes will apply only to future
+              billing cycles (e.g. to renewals or new subscriptions) and not retroactively to the current term.
+              If you do not agree to a price change, you may cancel the subscription before the new price takes effect.
+            </li>
+          </ul>
+        </section>
+
+        <section id="s6">
+          <h2>6. Cancellation and Refund Policy <span class="badge">Refunds</span></h2>
+          <p>
+            <strong>Cancellation:</strong> If you cancel a subscription, the cancellation will take effect at the
+            end of your current billing period. You will continue to have access to subscription content until the
+            end of the period you have already paid for, and you will not be charged again after that period ends.
+            Canceling a subscription stops future payments but does not automatically entitle you to a refund for the
+            current billing period.
+          </p>
+          <p>
+            <strong>Refunds:</strong> Purchases made through Qshi (including subscriptions) are generally
+            non-refundable, except as described here or required by applicable law. All billing and refund
+            transactions are handled via Google Play. If you request a refund within 48 hours of purchase, you may
+            be eligible to receive a refund depending on the details of the purchase. To request a refund within
+            this 48-hour window, please use the Google Play refund process. If more than 48 hours have passed since
+            your purchase and you experience an issue or believe a refund is warranted, you should contact us at the
+            email provided below.
+          </p>
+          <p>
+            Please note that users in some regions may have additional rights to cancel subscriptions and obtain refunds
+            for the unused portion of a subscription, if such rights are provided under local law. Except as otherwise
+            provided above, all charges for purchases are final and non-refundable. We do not offer refunds for partial
+            use or remaining time on a subscription after cancellation, except where required by applicable law.
+          </p>
+        </section>
+
+        <section id="s7">
+          <h2>7. Disclaimers <span class="badge">Disclaimer</span></h2>
+          <p>
+            Qshi is provided on an “as is” and “as available” basis. To the fullest extent permitted by law, Based
+            Solutions disclaims all warranties and representations, express or implied, regarding Qshi and its content,
+            including any warranties of accuracy, reliability, completeness, merchantability, fitness for a particular
+            purpose, and non-infringement. All information and content provided through Qshi are for general informational
+            and educational purposes only and are not intended to constitute professional advice of any kind.
+          </p>
+          <p>
+            Use of Qshi does not guarantee any specific results or outcomes. In particular, Based Solutions is not
+            responsible for any exam results, academic performance, or other outcomes that may occur due to your use of Qshi.
+            You understand and agree that any content, answers, or explanations provided by Qshi are intended to assist your
+            learning and decision-making, but they come with no guarantee of accuracy or success.
+          </p>
+        </section>
+
+        <section id="s8">
+          <h2>8. Limitation of Liability <span class="badge">Liability</span></h2>
+          <p>
+            To the maximum extent permitted by law, in no event will Based Solutions or its directors, officers, employees,
+            agents, partners, or affiliates be liable for any indirect, incidental, consequential, special, or punitive damages
+            of any kind. This includes, without limitation, any loss of profits, revenue, data, goodwill, or other intangible
+            losses arising out of or in connection with your access to, use of, or inability to use Qshi.
+          </p>
+          <p>
+            In any case, Based Solutions’ total liability for all claims arising from or related to your use of Qshi or these Terms,
+            whether in contract, tort, or otherwise, is limited to the amount (if any) you have paid to Based Solutions for the use
+            of Qshi in the twelve (12) months immediately preceding the event giving rise to the claim. Some jurisdictions do not
+            allow the exclusion or limitation of certain damages, so the above limitations may not fully apply to you.
+          </p>
+        </section>
+
+        <section id="s9">
+          <h2>9. Termination of Use <span class="badge">Termination</span></h2>
+          <p>
+            We reserve the right to suspend or terminate your access to Qshi at any time, with or without prior notice, if you fail
+            to comply with these Terms or if we decide to discontinue the app (or any part of it). If we terminate or suspend your
+            access, your right to use Qshi will immediately cease. You may also discontinue use of Qshi at any time by uninstalling
+            the app from your device.
+          </p>
+          <p>
+            Any provisions of these Terms that by their nature should survive termination (including but not limited to provisions
+            regarding intellectual property, disclaimers of warranty, limitation of liability, and governing law) will survive the
+            termination of your access to Qshi.
+          </p>
+        </section>
+
+        <section id="s10">
+          <h2>10. Changes to the Terms <span class="badge">Updates</span></h2>
+          <p>
+            We may update or modify these Terms from time to time. If we make material changes to these Terms, we will endeavor to
+            provide you with notice (for example, by posting a notification within Qshi or via an update note). The “Last updated”
+            date at the top of this document indicates when these Terms were last revised. By continuing to use Qshi after updated
+            Terms have been posted or communicated, you agree to the revised Terms. If you do not agree to any updated Terms, you must
+            stop using the app.
+          </p>
+        </section>
+
+        <section id="s11">
+          <h2>11. Contact Information <span class="badge">Support</span></h2>
+          <p>
+            If you have any questions, concerns, or feedback regarding these Terms or the use of Qshi, please contact us at:
+            <a href="mailto:ilya.ermilov.business@gmail.com">ilya.ermilov.business@gmail.com</a>.
+            We welcome your inquiries and will do our best to address your concerns.
+          </p>
+        </section>
+
+        <div class="footer">
+          © <span id="year"></span> Based Solutions. All rights reserved.
+        </div>
+      </main>
+    </article>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
