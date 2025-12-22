@@ -1,0 +1,4 @@
+# app-ads.txt for Qshi: Driver's License Tests
+# Authorized seller: Google AdMob
+
+google.com, pub-2879094686682417, DIRECT, f08c47fec0942fa0
